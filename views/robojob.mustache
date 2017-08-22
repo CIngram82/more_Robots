@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Jobless robots!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 
   </head>
   <body>
@@ -25,6 +25,10 @@
         {{^job}}
         <p class="jobLess">Available for hire!</p>
         {{/job}}
+        <h5> My Robo skills</h5>
+        {{#skills}}<a href="/skills/{{.}}" >{{.}}</a>{{/skills}}
+        <h5>Country</h5>
+        <a href="/country/{{address.country}}">{{address.country}}</a>
       </div>
       {{/allRobots}}
     </section>
