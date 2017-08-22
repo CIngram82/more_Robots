@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jobless robots!</title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <form class="" action="/nojob" method="post">
+      <input type="submit" name="noJob" value="Robots with no job">
+    </form>
+    <form class="" action="/haveJobs" method="post">
+      <input type="submit" name="withJob" value="Robots with jobs">
+    </form>
+    <br>
+    <section>
+    {{#allRobots}}
+      <div class="botBox" id={{id}}>
+        <img src={{avatar}}/>
+        <h2>{{name}}</h2>
+        {{#job}}
+        <p>{{job}},{{company}}</p>
+        {{/job}}
+        {{^job}}
+        <p class="jobLess">Available for hire!</p>
+        {{/job}}
+      </div>
+      {{/allRobots}}
+    </section>
+  </body>
+</html>
